@@ -15,6 +15,7 @@
 
 a, a:link, a:visited  {
     text-decoration: none;
+    color: inherit;
 }
 
 a:hover  {
@@ -125,7 +126,7 @@ legend {
 
  
 body {
-    font-family: "Seymour One", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 16px;
@@ -140,6 +141,15 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
+    padding-inline: 20px;
+}
+
+.title {
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #3b3b3b;
 }
 
 
@@ -149,7 +159,8 @@ body {
 .header {
     display: flex;
     background: #0400ff9f;
-    padding: 100px 0 100px 0;
+    padding: 100px 0 60px 0;
+    color: #fff;
 }
 
 .header__container {
@@ -188,31 +199,24 @@ body {
     content: '-';
     position: absolute;
     top: 0px;
-    left: 70px;
+    left: 60px;
     bottom: 0;
 }
 .header__title-main::after {
     content: '-';
     position: absolute;
     top: 0px;
-    left: 290px;
+    left: 260px;
     bottom: 0;
 }
 
 .header__title-subtitle {
     display: flex;
+    align-items: center;
+    justify-content: center;
     column-gap: 20px;
 }
 
-.header__icons {
-    position: relative;
-}
-
-.header__icons-arrow {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-}
 
 .header__icons-list {
     display: flex;
@@ -244,12 +248,99 @@ body {
     padding: 15px 40px;
 }
 
+.header__contacts {
+    margin-top: 20px;
+}
+
+.header__contacts-link {
+    color: #fff;
+    font-family: "Seymour One", sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+}
 
 /* main */
 
 .main {
-    color: black;
+    color: #000;
     font-size: 16;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
+    padding: 40px 0;
+}
+
+
+
+.about__wrapper {
+    display: flex;
+    justify-content: center;
+    column-gap: 60px;
+}
+
+.about__info {
+    max-width: 300px;
+    min-width: 150px;
+}
+
+.about__info-img {
+    rotate: -3deg;
+}
+
+.about__info-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.about__info-title {
+    font-size: 18px;
+}
+
+.about__description {
+    max-width: 600px;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+.about__title {
+    margin-bottom: 20px;
+}
+
+.about__description-title {
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+}
+
+.about__description-icons {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.about__description-icons-list {
+    display: flex;
+    column-gap: 20px;
+}
+
+.about__info-button {
+    display: flex;
+    align-self: center;
+    max-width: 400px;
+    background-color: #0004ffb6;
+    border-radius: 25px;
+    transition: 0.1s;
+    color: #fff;
+    padding: 10px 30px;
+    font-size: 12px;
+}
+
+.about__info-button:hover {
+    content: '';
+    transform: scale(1.05);
+    transition: 0.1s;
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.4);
 }
